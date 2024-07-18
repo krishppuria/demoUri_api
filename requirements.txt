@@ -1,0 +1,14 @@
+Django>=3.2,<4.1
+pymongo==4.4.0
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.2.2
+djangorestframework-simplejwt-mongoengine==1.2.1
+django-cors-headers
+bcrypt==4.0.1
+django-otp
+twilio==8.5.0
+boto3==1.28.29
+django-storages==1.13.2
+django-crontab
+firebase-admin==6.2.0
+stripe==7.2.0
