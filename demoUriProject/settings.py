@@ -15,7 +15,7 @@ DEBUG = False
 
 PORT = 8010
 
-ALLOWED_HOSTS = [ "3.90.31.196",'127.0.0.1','23.22.136.81',"api1.briskcovey.com", ]
+ALLOWED_HOSTS = [ "demouri-encee2fhejbze6ce.southindia-01.azurewebsites.net", ]
 
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 
