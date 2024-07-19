@@ -18,7 +18,6 @@ from django.template.loader import render_to_string
 @api_view(['POST'])
 def signup(request):
 
-    phone = request.data.get('phone')
     email = request.data.get('email')
 
     # Email Already Exists
@@ -26,10 +25,6 @@ def signup(request):
     if (email_already):
         return errorResponse("The email provided already exists.Please use a different email.")
 
-    # Mobile Number already Exists
-    phone_already = Account.getUserByPhone(int(phone))
-    if (phone_already):
-        return errorResponse("The mobile number provided already exists.Please use a different mobile number.")
     serializer = serializers.CandidateSignUp(data=request.data)
     if serializer.is_valid():
         serializer.validated_data['password'] = bcrypt.hashpw(

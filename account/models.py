@@ -53,10 +53,3 @@ class Account(models.Model):
         return db[cls.collection_name].find_one({'_id': ObjectId(id)},{'password':0})
 
     
-    # ---------------------------------------------------------------
-    # Get user by Phone Number
-    # ---------------------------------------------------------------
-    
-    @classmethod
-    def getUserByPhone(cls, phone):
-        return db[cls.collection_name].find_one({'phone': phone},{'_id': 0, 'password':0})

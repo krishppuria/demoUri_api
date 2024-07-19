@@ -10,8 +10,6 @@ class CandidateSignUp(serializers.Serializer):
     firstName = serializers.CharField(error_messages=stringRequiredFieldError("First name"))
     lastName = serializers.CharField(error_messages=stringRequiredFieldError("Last name"))
     email = serializers.EmailField(error_messages=stringRequiredFieldError("Email"))
-    phone = serializers.IntegerField(min_value=10000000, error_messages=numberRequiredFieldError("Mobile number"))
-    country = serializers.CharField(error_messages=stringRequiredFieldError("Country"))
     password = serializers.CharField(error_messages=stringRequiredFieldError("Password"))
     fcmToken = serializers.CharField(
         required=False,
