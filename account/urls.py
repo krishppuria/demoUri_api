@@ -10,7 +10,7 @@ urlpatterns = [
     # ------------------------------------------------
     # Auth
     # ------------------------------------------------
-    path('signup/', views.signup ),
-    path('profile/', views.profile ),
+    path('signup', views.signup ),
+    path('profile', views.profile ),
 
 ]
