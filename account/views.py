@@ -23,7 +23,7 @@ def signup(request):
         email = request.data.get('email')
 
         # Email Already Exists
-        email_already = Account.get(email)
+        email_already = Account.get(email.lower())
         if (email_already):
             return errorResponse("The email provided already exists.Please use a different email.")
 
